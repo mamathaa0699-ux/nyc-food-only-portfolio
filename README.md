@@ -1,7 +1,7 @@
-# NYC Food-Only Restaurant Data Pipeline (Palantir Foundry Project)
+# Enterprise ETL Pipeline IN Palantir Foundry
 
 over all process
-# NYC Food-Only Restaurant ETL Pipeline (Palantir Foundry Project)
+# NYC Food-Only Restaurant Data Engineering project (Palantir Foundry Project)
 
 ## 📌 Project Overview
 
@@ -14,9 +14,28 @@ This project demonstrates an end-to-end data engineering workflow built in Palan
 - Object Relationships & Preview
 - Git Version Control
 
+- ## 🎯 Business Objective
+
+NYC restaurant inspection data includes various establishment types such as:
+- Full-service restaurants
+- Grocery stores
+- Alcohol-only establishments
+
+The goal of this project was to:
+- Identify and retain only food-serving restaurants
+- Exclude non-restaurant entities
+- Produce a clean, analytics-ready dataset
+- Model entities using Foundry Ontology for relationship-based analysis
+
 ---
 
 ## 🏗 Pipeline Architecture
+
+## 🏗 End-to-End Architecture
+
+This project follows a Medallion architecture pattern:
+
+Raw (Bronze) → Cleaned (Silver) → Aggregated (Gold) → Ontology Modeling → Object Validation
 
 <p align="center">
   <img src="docs/screenshots/pipeline_builder_raw_silver_gold_overview.png" width="900"/>
@@ -27,7 +46,6 @@ This pipeline follows Medallion Architecture principles:
 - Silver layer cleaning & filtering
 - Gold layer aggregation
 
----
 
 ## 🧹 Silver Layer – Food Only Filtering
 
