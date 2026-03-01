@@ -1,7 +1,19 @@
+# Ignore full data folder
 data/
+
+# Ignore data files
 *.csv
 *.parquet
-*.zip
+
+# Logs & temp files
 *.log
+*.zip
+
+# Python cache
 _pycache_/
+*.pyc
+
+# Environment files
 .env
+.venv/
+venv/
