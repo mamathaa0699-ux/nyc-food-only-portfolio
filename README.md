@@ -1,55 +1,68 @@
-# NYC Food-Only Restaurant Data Pipeline Project
+# NYC Food-Only Restaurant Data Pipeline (Palantir Foundry Project)
 
 ## Project Overview
-This project demonstrates a structured data engineering pipeline that processes restaurant inspection data and filters businesses that sell food only (no alcohol or grocery sales).
 
-The goal is to simulate a real-world medallion architecture using Bronze, Silver, and Gold layers.
+This project was developed using Palantir Foundry to simulate a real-world enterprise data engineering workflow.
 
----
+The objective was to build a structured data pipeline that filters and processes restaurant inspection data to identify businesses that sell food only (excluding alcohol-serving establishments and grocery stores).
 
-## Architecture
-
-data/
-│
-├── raw/        → Original dataset (Bronze Layer)
-├── curated/    → Cleaned & transformed data (Silver Layer)
-└── gold/       → Aggregated & business-ready data (Gold Layer)
+The project demonstrates medallion architecture (Bronze, Silver, Gold layers) using Foundry’s Pipeline Builder and Ontology.
 
 ---
 
-## Technologies Used
+## Architecture (Medallion Design)
 
-- Python
-- Pandas
-- Git
-- GitHub
+Bronze Layer (Raw)
+- Ingested raw CSV dataset into Foundry
+- Automatically generated schema
+
+Silver Layer (Curated)
+- Applied data cleaning
+- Removed duplicates
+- Filtered unwanted categories (alcohol, grocery, etc.)
+- Applied business transformation logic
+
+Gold Layer (Business Ready)
+- Aggregated results
+- Prepared reporting dataset
+- Structured final analytics table
+
+---
+
+## Tools & Technologies
+
+- Palantir Foundry
+- Pipeline Builder
+- Ontology Workshop
+- Python (Transform API)
+- Git & GitHub
 - VS Code
-- Medallion Architecture Design
 
 ---
 
 ## Business Use Case
 
-Identify restaurants that:
-- Sell only food
+Designed for stakeholders who want to:
+
+- Identify food-only restaurants
 - Exclude alcohol-serving establishments
 - Exclude grocery stores
-- Provide clean datasets for analytics
+- Enable analytics and reporting on clean restaurant data
 
 ---
 
-## Pipeline Steps
+## Key Skills Demonstrated
 
-1. Ingest raw CSV data
-2. Clean and filter unwanted categories
-3. Remove duplicates
-4. Apply business rules
-5. Aggregate results for reporting
-6. Store final dataset in Gold layer
+- Data pipeline design
+- Medallion architecture implementation
+- Enterprise data modeling
+- Business rule transformation
+- Data governance concepts
+- Version control with Git
 
 ---
 
 ## Author
 
 Mamatha  
-Data Engineer | Data Pipeline & Analytics Enthusiast
+Data Engineer | Data Platforms & Analytics Enthusiast
